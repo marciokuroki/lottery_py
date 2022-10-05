@@ -1,5 +1,7 @@
 import random
+from typing import Final
 class Lotofacil:
+    LIMITE_SUPERIOR: Final[int] = 25
     jogo = []
     qtd_dezenas = 0
 
@@ -9,8 +11,9 @@ class Lotofacil:
     def quantidade_dezenas(self, qtd):
         self.quantidade_dezenas = qtd
 
-    def add_numero(self):        
-        numero_escolhido = random.randint(1, 25)        
+    def add_numero(self):
+        global LIMITE_SUPERIOR
+        numero_escolhido = random.randint(1, LIMITE_SUPERIOR)
         if (numero_escolhido not in self.jogo): 
             if (self.jogo.length() < self.qtd_dezenas):
                 self.jogo.append()
