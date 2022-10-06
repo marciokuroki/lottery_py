@@ -3,8 +3,8 @@ from typing import Final
 class Mega:
     jogo = []
     qtd_dezenas = 0
-    LIMITE_SUPERIOR = 60
-    LIMITE_INFERIOR = 1
+    LIMITE_SUPERIOR: Final[int] = 60
+    LIMITE_INFERIOR: Final[int] = 1
 
     def __init__(self, jogo) -> None:
         self.jogo = jogo
