@@ -10,6 +10,6 @@ class TestLotomania(unittest.TestCase):
         self.jogo = Lotomania()
         return super().setUp()
 
-    def test_escolher_numero_entre_1_e_99(self):
+    def test_escolher_numero_entre_0_e_99(self):
         self.jogo.addNumero()
         self.assertCountEqual(self.jogo.length(), 1);
